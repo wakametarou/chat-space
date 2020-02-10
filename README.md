@@ -4,17 +4,17 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many :message
+- has_many :messages
 - has_many :groups,through: :groups_users
 - has_many :groups_users
 
 ## gropsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
@@ -24,14 +24,14 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|nill: false|
-|image|string|nill: false|
+|body|text||
+|image|string||
 |group|references|nill: false, foreign_key: true|
 |user|references|nill: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 
 ## groups_usersテーブル
 |Column|Type|Options|
