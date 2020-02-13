@@ -43,17 +43,21 @@
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 20px;
+
+  &__group{
+    color: #ffffff;
+    margin-bottom: 40px;
+  
+    &__group-name{
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    &__latest-message{
+      font-size: 11px;
+      color: #ffffff;
+    }
+  }
 }
 
-.group{
-  color: #ffffff;
-  margin-bottom: 40px;
-
-  &__group-name{
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
-  &__latest-message{
-    font-size: 11px;
-  }
-}
