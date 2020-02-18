@@ -1,1 +1,4 @@
-json.array! @articles, partial: "articles/article", as: :article
+json.array! @users do |user|
+  json.id user.id
+  json.name user.name
+end
